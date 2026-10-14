@@ -1,0 +1,208 @@
+.site-header {
+    --bg: #EDEDED;
+    --ink: #0D0504;
+    --accent: #B25E27;
+    --choco: #552A19;
+    --brown: #6A554A;
+    --tan: #B78E6B;
+    --t: 0.3s ease;
+    --container: 1200px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.1rem 0;
+    background: rgba(237, 237, 237, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: var(--t);
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.site-header.scrolled {
+    padding: 0.6rem 0;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(13, 5, 4, 0.08);
+}
+
+.site-header .nav-wrap {
+    width: min(var(--container), 92%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.site-header .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.site-header .logo span {
+    color: var(--accent);
+}
+
+.site-header .logo i {
+    color: var(--accent);
+}
+
+.site-header .nav-links {
+    display: flex;
+    gap: 2.2rem;
+}
+
+.site-header .nav-links a {
+    font-size: 0.95rem;
+    color: var(--ink);
+    font-weight: 500;
+    position: relative;
+    padding: 0.35rem 0;
+    transition: var(--t);
+    text-decoration: none;
+}
+
+.site-header .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: var(--t);
+}
+
+.site-header .nav-links a:hover,
+.site-header .nav-links a.active {
+    color: var(--accent);
+}
+
+.site-header .nav-links a:hover::after,
+.site-header .nav-links a.active::after {
+    width: 100%;
+}
+
+.site-header .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--t);
+    flex-shrink: 0;
+}
+
+.site-header .nav-cta:hover {
+    background: #9a4f1e;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(178, 94, 39, 0.35);
+}
+
+.site-header .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+}
+
+.site-header .hamburger span {
+    width: 26px;
+    height: 2px;
+    background: var(--ink);
+    transition: var(--t);
+}
+
+.site-header .hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.site-header .hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.site-header .hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.site-header .nav-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(13, 5, 4, 0.5);
+    opacity: 0;
+    transition: var(--t);
+    z-index: 999;
+}
+
+.site-header .nav-backdrop.show {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .site-header .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 72%;
+        background: var(--ink);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.4s ease;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+        z-index: 1001;
+    }
+
+    .site-header .nav-links.open {
+        right: 0;
+    }
+
+    .site-header .nav-links a {
+        color: var(--bg);
+        font-size: 1.2rem;
+    }
+
+    .site-header .nav-links a::after {
+        background: var(--accent);
+    }
+
+    .site-header .hamburger {
+        display: flex;
+        z-index: 1100;
+    }
+
+    .site-header .nav-cta {
+        display: none;
+    }
+}
+
+body.has-site-header {
+    padding-top: 72px;
+}
+
+@media (max-width: 768px) {
+    body.has-site-header {
+        padding-top: 68px;
+    }
+}

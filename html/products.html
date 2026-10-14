@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AiKoFe — Products</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/products.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow light">Shop</span>
+      <h1>Featured Products</h1>
+      <p>Take the AiKoFe experience home — beans, blends, and brewing gear.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="beans">Beans</button>
+        <button class="filter-btn" data-category="equipment">Equipment</button>
+        <button class="filter-btn" data-category="merch">Merch</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-category="beans">
+          <span class="tag">Best Seller</span>
+          <img src="../assets/images/coffee-beans.jpg" alt="Ethiopian beans" />
+          <h3>Ethiopian Yirgacheffe</h3>
+          <p>Floral, bright, citrus-forward. 340g whole bean.</p>
+          <div class="row"><span class="price">$18.00</span><button class="icon-btn" aria-label="Add"><i class="fa-solid fa-plus"></i></button></div>
+        </article>
+        <article class="product-card" data-category="beans">
+          <span class="tag">New</span>
+          <img src="../assets/images/coffee-beans.jpg" alt="Colombian beans" />
+          <h3>Colombian Supremo</h3>
+          <p>Caramel, nutty, balanced. 340g whole bean.</p>
+          <div class="row"><span class="price">$16.00</span><button class="icon-btn" aria-label="Add"><i class="fa-solid fa-plus"></i></button></div>
+        </article>
+        <article class="product-card" data-category="beans">
+          <img src="../assets/images/coffee-beans.jpg" alt="Guatemalan beans" />
+          <h3>Guatemalan Antigua</h3>
+          <p>Chocolatey, rich, full-bodied. 340g whole bean.</p>
+          <div class="row"><span class="price">$17.50</span><button class="icon-btn" aria-label="Add"><i class="fa-solid fa-plus"></i></button></div>
+        </article>
+
+        <article class="product-card" data-category="equipment">
+          <span class="tag">Staff Pick</span>
+          <img src="../assets/images/interior.jpg" alt="Gooseneck kettle" />
+          <h3>Gooseneck Kettle</h3>
+          <p>Precision pour-over kettle, 1L, matte black.</p>
+          <div class="row"><span class="price">$45.00</span><button class="icon-btn" aria-label="Add"><i class="fa-solid fa-plus"></i></button></div>
+        </article>
+        <article class="product-card" data-category="equipment">
+          <img src="../assets/images/espresso.jpg" alt="French press" />
+          <h3>French Press</h3>
+          <p>Double-walled stainless steel, 600ml.</p>
+          <div class="row"><span class="price">$32.00</span><button class="icon-btn" aria-label="Add"><i class="fa-solid fa-plus"></i></button></div>
+        </article>
+
+        <article class="product-card" data-category="merch">
+          <img src="../assets/images/cappuccino.jpg" alt="Ceramic mug" />
+          <h3>Signature Ceramic Mug</h3>
+          <p>Handmade in Portland. 350ml.</p>
+          <div class="row"><span class="price">$22.00</span><button class="icon-btn" aria-label="Add"><i class="fa-solid fa-plus"></i></button></div>
+        </article>
+        <article class="product-card" data-category="merch">
+          <img src="../assets/images/barista.jpg" alt="Canvas tote" />
+          <h3>Canvas Tote</h3>
+          <p>Heavyweight cotton tote with AiKoFe print.</p>
+          <div class="row"><span class="price">$18.00</span><button class="icon-btn" aria-label="Add"><i class="fa-solid fa-plus"></i></button></div>
+        </article>
+        <article class="product-card" data-category="merch">
+          <span class="tag">Limited</span>
+          <img src="../assets/images/latte.jpg" alt="Gift set" />
+          <h3>Holiday Gift Set</h3>
+          <p>Two 200g bags + signature mug in a gift box.</p>
+          <div class="row"><span class="price">$39.00</span><button class="icon-btn" aria-label="Add"><i class="fa-solid fa-plus"></i></button></div>
+        </article>
+      </div>
+
+      <p class="menu-note" id="productNote"></p>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/header.js" defer></script>
+  <script src="../js/footer.js" defer></script>
+  <script src="../js/products.js" defer></script>
+</body>
+</html>

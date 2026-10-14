@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AiKoFe — Menu</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/menu.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow light">Our Menu</span>
+      <h1>What's Brewing</h1>
+      <p>Every drink made to order with freshly roasted beans and locally sourced milk.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="espresso">Espresso</button>
+        <button class="filter-btn" data-category="milk">Milk-Based</button>
+        <button class="filter-btn" data-category="cold">Cold</button>
+        <button class="filter-btn" data-category="other">Other</button>
+      </div>
+
+      <div class="menu-list" id="menuList">
+        <article class="menu-item" data-category="espresso">
+          <img src="../assets/images/espresso.jpg" alt="Espresso" />
+          <div class="menu-item-body">
+            <div class="menu-item-head"><h3>Classic Espresso</h3><span class="price">$3.50</span></div>
+            <p>Rich, concentrated shot with golden crema.</p>
+          </div>
+        </article>
+        <article class="menu-item" data-category="espresso">
+          <img src="../assets/images/americano.jpg" alt="Americano" />
+          <div class="menu-item-body">
+            <div class="menu-item-head"><h3>Americano</h3><span class="price">$3.80</span></div>
+            <p>Espresso diluted with hot water — smooth and bold.</p>
+          </div>
+        </article>
+        <article class="menu-item" data-category="espresso">
+          <img src="../assets/images/mocha.jpg" alt="Mocha" />
+          <div class="menu-item-body">
+            <div class="menu-item-head"><h3>Caffè Mocha</h3><span class="price">$5.20</span></div>
+            <p>Espresso, dark chocolate, steamed milk, cream.</p>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="milk">
+          <img src="../assets/images/latte.jpg" alt="Latte" />
+          <div class="menu-item-body">
+            <div class="menu-item-head"><h3>Velvet Latte</h3><span class="price">$4.80</span></div>
+            <p>Double shot with silky microfoam and latte art.</p>
+          </div>
+        </article>
+        <article class="menu-item" data-category="milk">
+          <img src="../assets/images/cappuccino.jpg" alt="Cappuccino" />
+          <div class="menu-item-body">
+            <div class="menu-item-head"><h3>Classic Cappuccino</h3><span class="price">$4.50</span></div>
+            <p>Equal parts espresso, steamed milk, and airy foam.</p>
+          </div>
+        </article>
+        <article class="menu-item" data-category="milk">
+          <img src="../assets/images/latte.jpg" alt="Flat white" />
+          <div class="menu-item-body">
+            <div class="menu-item-head"><h3>Flat White</h3><span class="price">$4.60</span></div>
+            <p>Ristretto shots with velvety microfoam.</p>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="cold">
+          <img src="../assets/images/coldbrew.jpg" alt="Cold brew" />
+          <div class="menu-item-body">
+            <div class="menu-item-head"><h3>Cold Brew</h3><span class="price">$4.20</span></div>
+            <p>Steeped 18 hours for a smooth, low-acid finish.</p>
+          </div>
+        </article>
+        <article class="menu-item" data-category="cold">
+          <img src="../assets/images/americano.jpg" alt="Iced americano" />
+          <div class="menu-item-body">
+            <div class="menu-item-head"><h3>Iced Americano</h3><span class="price">$4.00</span></div>
+            <p>Double shot over ice with an orange twist.</p>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="other">
+          <img src="../assets/images/cappuccino.jpg" alt="Hot chocolate" />
+          <div class="menu-item-body">
+            <div class="menu-item-head"><h3>Belgian Hot Chocolate</h3><span class="price">$4.00</span></div>
+            <p>Rich dark chocolate melted into steamed milk.</p>
+          </div>
+        </article>
+        <article class="menu-item" data-category="other">
+          <img src="../assets/images/latte.jpg" alt="Matcha latte" />
+          <div class="menu-item-body">
+            <div class="menu-item-head"><h3>Matcha Latte</h3><span class="price">$5.00</span></div>
+            <p>Ceremonial-grade matcha whisked with steamed milk.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="menu-note" id="menuNote"></p>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/header.js" defer></script>
+  <script src="../js/footer.js" defer></script>
+  <script src="../js/menu.js" defer></script>
+</body>
+</html>
